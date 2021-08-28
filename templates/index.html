@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="../static/dropdown.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
     <!-- JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -40,58 +43,69 @@
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="mobile-menu dropdown">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <div class="dropdown-content">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </div>
             </div>
+        </nav>
+
         </nav>
     </header>
 
     <main class="main">
-        <h2>Heard you had an injury of sorts? Welcome to HealMe.</h2>
-        <p>Name: <input type="text" id="fname" placeholder="Name">
-            <button type="submit">Submit</button> </p>
+        <h1 class="heading"> HealMe</h1>
+        <h3>Had an injury of sorts? Welcome to HealMe.</h3>
 
-        <div class="dropdown">
-            <button class="dropbtn">All Injuries</button>
-            <div class="dropdown-content">
-                <a href="#">Mild Meniscal strain</a>
-                <a href="#">Moderate Meniscal tear</a>
-                <a href="#">Severe Meniscal tear</a>
+        <div>
+            <div class="dropdown injuries">
+                <button class="dropbtn">Find Your Injury</button>
+                <div class="dropdown-content">
+                    <a href="#">Mild meniscal strain</a>
+                    <a href="#">Moderate eniscal tear</a>
+                    <a href="#">Severe meniscal tear</a>
+                </div>
+                <a id="rehab" href="#"> Take me to rehab exercises <i class="bi bi-arrow-right"></i></a>
             </div>
 
-        </div>
-        <div class="quiz">
-            <form class="input" name="questions" enctype="multipart/form-data">
-
-                <p>Try to bend your knee, then straighten and rotate it. <br /> Do you feel pain, clicking, or a clunking sensation within the joint?</p>
-                <label>
+            <br><br>
+            <div class="quiz">
+                <form class="input" name="questions" enctype="multipart/form-data">
+                    <ol>
+                        <p>Try to bend your knee, then straighten and rotate it. <br /> Do you feel pain, clicking, or a clunking sensation within the joint?</p>
+                        <label>
         <input type="radio" name="y/n" value="Yes" id="first_0">Yes
       </label>
-                <label>
+                        <label>
         <input type="radio" name="y/n" value="No" id="first_1">No
       </label>
-                <p>If yes, after your injury, gradually over time, <br /> did your knee become more stiff and swollen?</p>
-                <label>
+                        <p>If yes, after your injury, gradually over time, <br /> did your knee become more stiff and swollen?</p>
+                        <label>
           <input type="radio" name="y/n" value="Yes" id="first_0">Yes
         </label>
-                <label>
+                        <label>
           <input type="radio" name="y/n" value="No" id="first_1">No
         </label>
-                <p>If yes, do you have inability to straighten the knee, <br /> knee that gives way, or stiffness and swelling right after your injury? </p>
-                <label>
+                        <p>If yes, do you have inability to straighten the knee, <br /> knee that gives way, or stiffness and swelling right after your injury? </p>
+                        <label>
           <input type="radio" name="y/n" id="first_0">Yes
         </label>
-                <label>
+                        <label>
           <input type="radio" name="y/n" id="first_1">No
         </label>
-            </form>
+                    </ol>
+                </form>
+            </div>
+            <br>
+            <button id="submit">Submit your answers!</button>
         </div>
-        <br>
-        <button id="submit">Submit your answers!</button>
-        <div class="anwers"> </div>
-
     </main>
     <footer>
         <div class="footer-2 text-center">
