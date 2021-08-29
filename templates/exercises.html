@@ -67,12 +67,13 @@
         <!--Done with the help of  W3Schools-->
         <style>
             .filterDiv {
+                line-height: 100px;
                 justify-content: space-around;
-                display: inline;
+                display: none;
             }
             
             .videos {
-                margin: 0px;
+                margin-left: 0px;
             }
             
             .show {
@@ -116,66 +117,65 @@
 
             <div class="container videos">
                 <div class="filterDiv Knee"><iframe width="560" height="315" src="https://www.youtube.com/embed/5KZf-nsTh0A?start=24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="filterDiv Knee"><iframe width="560" height="315" src="https://www.youtube.com/embed/guuzyIHgGBg?start=16" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    </div>
+                <div class="filterDiv Knee"><iframe width="560" height="315" src="https://www.youtube.com/embed/guuzyIHgGBg?start=16" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                 <div class="filterDiv Knee"><iframe width="560" height="315" src="https://www.youtube.com/embed/V1c2s6X1Q6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                 <div class="filterDiv Knee Shoulder Ankle Elbow Thighs Wrist">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1RRZkGm8Gyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1RRZkGm8Gyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    </div>
+
                 <div class="filterDiv Knee Shoulder Ankle Elbow Thighs Wrist">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/PxCac1HzoJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="filterDiv Knee"><iframe width="560" height="315" src="https://www.youtube.com/embed/sJR7oMWQ2i8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="filterDiv Knee">
-                        <iframe width="560" height="315" src="<iframe width=" 560 " height="315 " src="https://www.youtube.com/embed/hIr2sh5FQx0 " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture " allowfullscreen></iframe></div>
+                <div class="filterDiv Knee"><iframe width="560" height="315" src="https://www.youtube.com/embed/sJR7oMWQ2i8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="filterDiv Knee"><iframe width=" 560 " height="315 " src="https://www.youtube.com/embed/hIr2sh5FQx0 " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture " allowfullscreen></iframe>
                 </div>
+            </div>
+            <script>
+                filterSelection("all")
 
-                <script>
-                    filterSelection("all ")
+                function filterSelection(c) {
+                    var x, i;
+                    x = document.getElementsByClassName("filterDiv");
+                    if (c == "all") c = "";
+                    for (i = 0; i < x.length; i++) {
+                        w3RemoveClass(x[i], "show");
+                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                    }
+                }
 
-                    function filterSelection(c) {
-                        var x, i;
-                        x = document.getElementsByClassName("filterDiv ");
-                        if (c == "all ") c = " ";
-                        for (i = 0; i < x.length; i++) {
-                            w3RemoveClass(x[i], "show ");
-                            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show ");
+                function w3AddClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        if (arr1.indexOf(arr2[i]) == -1) {
+                            element.className += " " + arr2[i];
                         }
                     }
+                }
 
-                    function w3AddClass(element, name) {
-                        var i, arr1, arr2;
-                        arr1 = element.className.split(" ");
-                        arr2 = name.split(" ");
-                        for (i = 0; i < arr2.length; i++) {
-                            if (arr1.indexOf(arr2[i]) == -1) {
-                                element.className += " " + arr2[i];
-                            }
+                function w3RemoveClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        while (arr1.indexOf(arr2[i]) > -1) {
+                            arr1.splice(arr1.indexOf(arr2[i]), 1);
                         }
                     }
+                    element.className = arr1.join(" ");
+                }
 
-                    function w3RemoveClass(element, name) {
-                        var i, arr1, arr2;
-                        arr1 = element.className.split(" ");
-                        arr2 = name.split(" ");
-                        for (i = 0; i < arr2.length; i++) {
-                            while (arr1.indexOf(arr2[i]) > -1) {
-                                arr1.splice(arr1.indexOf(arr2[i]), 1);
-                            }
-                        }
-                        element.className = arr1.join(" ");
-                    }
-
-                    // Add active class to the current button (highlight it)
-                    var btnContainer = document.getElementById("myBtnContainer ");
-                    var btns = btnContainer.getElementsByClassName("btn ");
-                    for (var i = 0; i < btns.length; i++) {
-                        btns[i].addEventListener("click ", function() {
-                            var current = document.getElementsByClassName("activebtn ");
-                            current[0].className = current[0].className.replace(" activebtn ", " ");
-                            this.className += " activebtn ";
-                        });
-                    }
-                </script>
+                // Add active class to the current button (highlight it)
+                var btnContainer = document.getElementById("myBtnContainer");
+                var btns = btnContainer.getElementsByClassName("btn");
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].addEventListener("click", function() {
+                        var current = document.getElementsByClassName("activebtn");
+                        current[0].className = current[0].className.replace(" activebtn", "");
+                        this.className += " activebtn";
+                    });
+                }
+            </script>
     </main>
     <footer class="footer ">
         <div class="footer-2 text-center ">
