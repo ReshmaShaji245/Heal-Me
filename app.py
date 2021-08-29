@@ -14,3 +14,7 @@ def index():
 @app.route("/exercises")
 def exercises():
     return render_template("exercises.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
