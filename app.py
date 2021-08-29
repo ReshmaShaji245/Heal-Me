@@ -18,3 +18,8 @@ def exercises():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+
+@app.route("/firstaid")
+def firstaid():
+    return render_template("firstaid.html")
