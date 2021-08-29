@@ -64,16 +64,14 @@
 
     <main class="main">
         <h1 class="heading" style="font-size:40px;"> Exercises</h1>
-
+        <!--Done with the help of  W3Schools-->
         <style>
             .filterDiv {
                 float: left;
-                background-color: #2196F3;
-                color: #ffffff;
+                color: white;
                 width: 100px;
                 line-height: 100px;
-                text-align: center;
-                margin: 2px;
+                justify-content: space-around;
                 display: none;
             }
             
@@ -106,9 +104,6 @@
         </style>
 
         <body>
-
-            <h2>Filter DIV Elements</h2>
-
             <div id="myBtnContainer">
                 <button class="btn activebtn" onclick="filterSelection('all')"> Show all</button>
                 <button class="btn" onclick="filterSelection('Knee')"> Knee</button>
@@ -119,7 +114,7 @@
                 <button class="btn" onclick="filterSelection('Wrist')"> Wrist</button>
             </div>
 
-            <div class="container">
+            <div class="container videos">
                 <div class="filterDiv Knee"><iframe width="560" height="315" src="https://www.youtube.com/embed/5KZf-nsTh0A?start=24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                 <div class="filterDiv Knee"><iframe width="560" height="315" src="https://www.youtube.com/embed/5KZf-nsTh0A?start=24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                 <div class="filterDiv Knee"><iframe width="560" height="315" src="https://www.youtube.com/embed/5KZf-nsTh0A?start=24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
