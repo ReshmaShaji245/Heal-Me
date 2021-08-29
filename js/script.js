@@ -43,16 +43,16 @@ function getResult() {
     var third = document.getElementById("third_0");
 
     if (first.checked == true && second.checked == false && third.checked == false) {
-        result = "../templates/mild";
+        result = "/mildmeniscal";
 
     } else if (first.checked == true && second.checked == true && third.checked == false) {
-        result = "../templates/moderate.html";
+        result = "/moderate.html";
     } else if (first.checked == false && second.checked == true && third.checked == false) {
-        result = "../templates/moderate.html";
+        result = "/moderate.html";
     } else if (first.checked == true && second.checked == true && third.checked == true) {
-        result = "../templates/severe.html";
+        result = "/severe.html";
     } else {
-        result = "../templates/mild.html";
+        result = "/mildmeniscal.html";
     }
 
     window.location.replace(result);
