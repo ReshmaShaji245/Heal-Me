@@ -1,5 +1,5 @@
-    .home {
-        background-color: rgb(255, 200, 191);
+    body {
+        background-color: rgb(255, 200, 191)!important;
         margin: 0px!important;
         padding: 0px!important;
     }
@@ -52,7 +52,7 @@
     }
     
     li .active {
-        text-decoration: underline;
+        text-decoration: underline!important;
         text-decoration-color: rgb(255, 5, 142)!important;
     }
     
@@ -131,6 +131,12 @@
     
     #questions {
         margin-left: -25px;
+    }
+    
+    #submit {
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        padding: 8px;
     }
     
     .footer-2 {
