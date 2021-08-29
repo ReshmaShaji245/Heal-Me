@@ -23,3 +23,13 @@ def about():
 @app.route("/firstaid")
 def firstaid():
     return render_template("firstaid.html")
+
+
+@app.route("/mildmeniscal")
+def mildmeniscal():
+    return render_template("mildmeniscal.html")
+
+@app.route("/moderate")
+def moderate():
+    return render_template("moderate.html")
+
