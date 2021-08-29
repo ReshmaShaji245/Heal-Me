@@ -29,12 +29,34 @@ function Questions_knee() {
         <input type="radio" id="third_1" required name="straight_knee" value="No">   <label for="third_1">No</label>
         <br>
         <br>
-        <input id="submit" type="submit" value="Submit">
+        <input id="submit" type="submit" value="Submit" onclick=getResult()>
 </form>
    `;
     questions.innerHTML = pastequestions;
 
 }
+
+function getResult() {
+    var result = "";
+    var first = document.getElementById("first_0");
+    var second = document.getElementById("first_0");
+    var third = document.getElementById("first_0");
+
+    if (first.checked == true && second.checked == false && third.checked == false) {
+        result = "mild";
+        window.location.replace("http://www.w3schools.com");
+    } else if (first.checked == true && second.checked == true && third.checked == false) {
+        result = "moderate";
+    } else if (first.checked == false && second.checked == true && third.checked == false) {
+        result = "moderate";
+    } else if (first.checked == true && second.checked == true && third.checked == true) {
+        result = "severe";
+    } else {
+        result = "mild";
+    }
+    alert(result);
+}
+
 
 function save() {
     var checkbox = document.getElementById('checkbox1');
