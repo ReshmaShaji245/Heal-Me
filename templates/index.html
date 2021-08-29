@@ -111,37 +111,97 @@
                 questions.innerHTML = ""; //empty the space just in case something else was there
 
                 let pastequestions = `<form class="input quiz" name="questions" action="getResult()">
-    <ol>
-        <li>
-            <p>Try to bend your knee, then straighten and rotate it. Do you feel pain, clicking or a clunking sensation within the joint?</p>
-        </li>
-        <input type="radio" id="first_0" required name="bend_knee" value="Yes">   <label for="first_0">Yes</label>
-        <br>
-        <input type="radio" id="first_1" required name="bend_knee" value="No">   <label for="first_1">No</label>
-        <br>
-        <br>
-        <li>
-            <p>After your injury, did your knee become more stiff and swollen gradually over time?</p>
-        </li>
-        <input type="radio" id="second_0" required name="knee_after" value="Yes">   <label for="second_0">Yes</label>
-        <br>
-        <input type="radio" id="second_1"required name="knee_after" value="No">   <label for="second_1">No</label>
-        <br>
-        <br>
-        <li>
-            <p>Do you have the inability to straighten the knee, a knee that gives way or stiffness and swelling right after your injury? </p>
-        </li>
-        <input type="radio" id="third_0"required name="straight_knee" value="Yes">   <label for="third_0">Yes</label>
-        <br>
-        <input type="radio" id="third_1" required name="straight_knee" value="No">   <label for="third_1">No</label>
-        <br>
-        <br>
-        <input id="submit" type="submit" value="Submit" onclick=getResult()>
-</form>
+                    <ol>
+                        <li>
+                            <p>Try to bend your knee, then straighten and rotate it. Do you feel pain, clicking or a clunking sensation within the joint?</p>
+                        </li>
+                        <input type="radio" id="first_0" required name="bend_knee" value="Yes">   <label for="first_0">Yes</label>
+                        <br>
+                        <input type="radio" id="first_1" required name="bend_knee" value="No">   <label for="first_1">No</label>
+                        <br>
+                        <br>
+                        <li>
+                            <p>After your injury, did your knee become more stiff and swollen gradually over time?</p>
+                        </li>
+                        <input type="radio" id="second_0" required name="knee_after" value="Yes">   <label for="second_0">Yes</label>
+                        <br>
+                        <input type="radio" id="second_1" required name="knee_after" value="No">   <label for="second_1">No</label>
+                        <br>
+                        <br>
+                        <li>
+                            <p>Do you have the inability to straighten the knee, a knee that gives way or stiffness and swelling right after your injury? </p>
+                        </li>
+                        <input type="radio" id="third_0" required name="straight_knee" value="Yes">   <label for="third_0">Yes</label>
+                        <br>
+                        <input type="radio" id="third_1" required name="straight_knee" value="No">   <label for="third_1">No</label>
+                        <br>
+                        <br>
+
+
+                        <li>
+                            <p>Do you often play sports that involve frequent jumping, such as basketball or volleyball?</p>
+                        </li>
+                        <input type="radio" id="first_0" required name="bend_knee" value="Yes">   <label for="first_0">Yes</label>
+                        <br>
+                        <input type="radio" id="first_1" required name="bend_knee" value="No">   <label for="first_1">No</label>
+                        <br>
+                        <br>
+                        <li>
+                            <p>Over time, did the pain worsen and started to interfere with playing your sport or daily activities like running and climbing stairs ?</p>
+                        </li>
+                        <input type="radio" id="first_0" required name="bend_knee" value="Yes">   <label for="first_0">Yes</label>
+                        <br>
+                        <input type="radio" id="first_1" required name="bend_knee" value="No">   <label for="first_1">No</label>
+                        <br>
+                        <br>
+                        <li>
+                            <p>Do you feel pain between your kneecap and your shinbone ?</p>
+                        </li>
+                        <input type="radio" id="first_0" required name="bend_knee" value="Yes">   <label for="first_0">Yes</label>
+                        <br>
+                        <input type="radio" id="first_1" required name="bend_knee" value="No">   <label for="first_1">No</label>
+                        <br>
+                        <br>
+                        <li>
+                            <p>Do you have an indentation or swelling at the bottom of your kneecap ?</p>
+                        </li>
+                        <input type="radio" id="first_0" required name="bend_knee" value="Yes">   <label for="first_0">Yes</label>
+                        <br>
+                        <input type="radio" id="first_1" required name="bend_knee" value="No">   <label for="first_1">No</label>
+                        <br>
+                        <br>
+                        <li>
+                            <p>Do you have difficulty walking due to the knee buckling or giving way ?</p>
+                        </li>
+                        <input type="radio" id="first_0" required name="bend_knee" value="Yes">   <label for="first_0">Yes</label>
+                        <br>
+                        <input type="radio" id="first_1" required name="bend_knee" value="No">   <label for="first_1">No</label>
+                        <br>
+                        <br>
+                        <li>
+                            <p>Do you have inflammation in front of your kneecap ?</p>
+                        </li>
+                        <input type="radio" id="first_0" required name="bend_knee" value="Yes">   <label for="first_0">Yes</label>
+                        <br>
+                        <input type="radio" id="first_1" required name="bend_knee" value="No">   <label for="first_1">No</label>
+                        <br>
+                        <br>
+                        <li>
+                            <p> Have you had any fall or direct blow on to the knee recently ?</p>
+                        </li>
+                        <input type="radio" id="first_0" required name="bend_knee" value="Yes">   <label for="first_0">Yes</label>
+                        <br>
+                        <input type="radio" id="first_1" required name="bend_knee" value="No">   <label for="first_1">No</label>
+                        <br>
+                        <br>
+
+                        <input id="submit" type="submit" value="Submit" onclick=getResult()>
+                </form>
    `;
                 questions.innerHTML = pastequestions;
 
             }
+
 
             function getResult() {
                 var result = "";
