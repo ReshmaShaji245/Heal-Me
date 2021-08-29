@@ -3,7 +3,7 @@ function Questions_knee() {
     var questions = document.getElementById("questions");
     questions.innerHTML = ""; //empty the space just in case something else was there
 
-    let pastequestions = `<form class="input quiz" name="questions" action="./redirect.html">
+    let pastequestions = `<form class="input quiz" name="questions" action="getResult()">
     <ol>
         <li>
             <p>Try to bend your knee, then straighten and rotate it. Do you feel pain, clicking or a clunking sensation within the joint?</p>
@@ -39,22 +39,23 @@ function Questions_knee() {
 function getResult() {
     var result = "";
     var first = document.getElementById("first_0");
-    var second = document.getElementById("first_0");
-    var third = document.getElementById("first_0");
+    var second = document.getElementById("second_0");
+    var third = document.getElementById("third_0");
 
     if (first.checked == true && second.checked == false && third.checked == false) {
         result = "mild";
-        window.location.replace("http://www.w3schools.com");
+
     } else if (first.checked == true && second.checked == true && third.checked == false) {
         result = "moderate";
     } else if (first.checked == false && second.checked == true && third.checked == false) {
         result = "moderate";
     } else if (first.checked == true && second.checked == true && third.checked == true) {
-        result = "severe";
+        result = "../templates/severe.html";
     } else {
         result = "mild";
     }
-    alert(result);
+
+    window.location.replace(result);
 }
 
 
@@ -62,11 +63,3 @@ function save() {
     var checkbox = document.getElementById('checkbox1');
     localStorage.setItem('checkbox1', checkbox.checked);
 }
-
-
-//for loading
-var checked = JSON.parse(localStorage.getItem("checkbox1"));
-if (checked == true) {
-    document.getElementById("checkbox1").checked = true;
-}
-document.getElementById("checkbox1").checked = checked;
