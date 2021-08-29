@@ -12,5 +12,5 @@ def index():
     return render_template("index.html")
 
 @app.route("/exercises")
-def homepage():
+def exercises():
     return render_template("exercises.html")
