@@ -150,19 +150,19 @@
                 var third = document.getElementById("third_0");
 
                 if (first.checked == true && second.checked == false && third.checked == false) {
-                    result = "/meniscalstrain/#mild";
+                    window.location.replace("/meniscalstrain/#mild");
 
                 } else if (first.checked == true && second.checked == true && third.checked == false) {
-                    result = "/meniscalstrain/#moderate";
+                    window.location.replace("/meniscalstrain/#moderate")
                 } else if (first.checked == false && second.checked == true && third.checked == false) {
-                    result = "/meniscalstrain/#moderate";
+                    window.location.replace("/meniscalstrain/#moderate");
                 } else if (first.checked == true && second.checked == true && third.checked == true) {
-                    result = "/meniscalstrain/#severe";
+                    window.location.replace("/meniscalstrain/#severe");
                 } else {
-                    result = "/meniscalstrain/#mild";
+                    window.location.replace("/meniscalstrain/#mild");
                 }
 
-                window.location.replace(result);
+
             }
         </script>
     </main>
