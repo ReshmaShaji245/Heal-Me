@@ -1,8 +1,7 @@
     .home {
         background-color: rgb(255, 200, 191);
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+        margin: 0!important;
+        padding: 0!important;
     }
     
     .header {
@@ -60,7 +59,7 @@
         display: none;
         position: absolute;
         background-color: white;
-        margin-left: 1.2em;
+        padding: 1em;
     }
     
     .navbar {
@@ -112,7 +111,7 @@
     }
     
     .main {
-        padding: 5%;
+        padding: 3% 5% 5% 5%;
     }
     
     .heading {
@@ -120,8 +119,17 @@
         font-size: 5em;
     }
     
+    #rehab {
+        color: black;
+        text-decoration: underline;
+        margin-left: 3%;
+    }
+    
     .footer-2 {
         background-color: black;
         color: white;
         position: relative;
+        height: 30px;
+        margin-top: 5%;
+        padding-top: 6px;
     }

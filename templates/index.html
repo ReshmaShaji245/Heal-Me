@@ -21,11 +21,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
     <!-- JS-->
+    <script src="../js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
-    <script src="./js/script.js"></script>
 </head>
 
 <body class="home">
@@ -64,48 +64,58 @@
         <h1 class="heading"> HealMe</h1>
         <h3>Had an injury of sorts? Welcome to HealMe.</h3>
 
-        <div>
+        <div class="container-fluid">
             <div class="dropdown injuries">
                 <button class="dropbtn">Find Your Injury</button>
                 <div class="dropdown-content">
-                    <a href="#">Mild meniscal strain</a>
-                    <a href="#">Moderate eniscal tear</a>
-                    <a href="#">Severe meniscal tear</a>
+                    <ul class="value-list">
+                        <li> <a href="#" onclick=Questions_knee()>Knee</a></li>
+                        <li> <a href="#">Shoulder</a></li>
+                        <li> <a href="#">Ankle</a></li>
+                        <li> <a href="#">Elbow</a></li>
+                        <li> <a href="#">Thighs</a></li>
+                        <li> <a href="#">Wrist</a></li>
+                    </ul>
                 </div>
                 <a id="rehab" href="#"> Take me to rehab exercises <i class="bi bi-arrow-right"></i></a>
             </div>
-
-            <br><br>
-            <div class="quiz">
-                <form class="input" name="questions" enctype="multipart/form-data">
+            <br>
+            <br>
+            <div id="questions">
+                <!--Questions based on the body part selected will be pasted here-->
+                <form class="input quiz" name="questions" action="./redirect.html">
                     <ol>
-                        <p>Try to bend your knee, then straighten and rotate it. <br /> Do you feel pain, clicking, or a clunking sensation within the joint?</p>
-                        <label>
-        <input type="radio" name="y/n" value="Yes" id="first_0">Yes
-      </label>
-                        <label>
-        <input type="radio" name="y/n" value="No" id="first_1">No
-      </label>
-                        <p>If yes, after your injury, gradually over time, <br /> did your knee become more stiff and swollen?</p>
-                        <label>
-          <input type="radio" name="y/n" value="Yes" id="first_0">Yes
-        </label>
-                        <label>
-          <input type="radio" name="y/n" value="No" id="first_1">No
-        </label>
-                        <p>If yes, do you have inability to straighten the knee, <br /> knee that gives way, or stiffness and swelling right after your injury? </p>
-                        <label>
-          <input type="radio" name="y/n" id="first_0">Yes
-        </label>
-                        <label>
-          <input type="radio" name="y/n" id="first_1">No
-        </label>
-                    </ol>
+                        <li>
+                            <p>Try to bend your knee, then straighten and rotate it. Do you feel pain, clicking or a clunking sensation within the joint?</p>
+                        </li>
+                        <input type="radio" id="first_0" name="y/n" value="Yes">   <label for="first_0">Yes</label>
+                        <br>
+                        <input type="radio" id="first_1" name="y/n" value="No">   <label for="first_1">No</label>
+                        <br>
+                        <br>
+                        <li>
+                            <p>If yes, after your injury, gradually over time, did your knee become more stiff and swollen?</p>
+                        </li>
+                        <input type="radio" id="second_0" name="y/n" value="Yes"><label for="second_0">Yes</label>
+                        <br>
+                        <input type="radio" id="second_1" name="y/n" value="No"><label for="second_1">No</label>
+                        <br>
+                        <br>
+                        <li>
+                            <p>If yes, do you have inability to straighten the knee,knee that gives way, or stiffness and swelling right after your injury? </p>
+                        </li>
+                        <input type="radio" id="third_0" name="y/n" value="Yes"><label for="third_0">Yes</label>
+                        <br>
+                        <input type="radio" id="third_1" name="y/n" value="No"><label for="third_1">No</label>
+                        <br>
+                        <br>
+                        <input id="submit" type="submit" value="Submit">
                 </form>
             </div>
-            <br>
-            <button id="submit">Submit your answers!</button>
         </div>
+
+
+        <br>
     </main>
     <footer>
         <div class="footer-2 text-center">
