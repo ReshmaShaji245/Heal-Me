@@ -46,20 +46,14 @@ function getResult() {
         result = "/mildmeniscal";
 
     } else if (first.checked == true && second.checked == true && third.checked == false) {
-        result = "/moderate.html";
+        result = "/moderate";
     } else if (first.checked == false && second.checked == true && third.checked == false) {
-        result = "/moderate.html";
+        result = "/moderate";
     } else if (first.checked == true && second.checked == true && third.checked == true) {
-        result = "/severe.html";
+        result = "/severe";
     } else {
-        result = "/mildmeniscal.html";
+        result = "/mildmeniscal";
     }
 
     window.location.replace(result);
-}
-
-
-function save() {
-    var checkbox = document.getElementById('checkbox1');
-    localStorage.setItem('checkbox1', checkbox.checked);
 }
